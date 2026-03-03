@@ -1,0 +1,31 @@
+*{
+  color: #000;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Sans-Serif;
+  background: #f3f3f3;
+  font-size: 20px;
+}
+.container {
+  padding: 0 25px;
+}
+img {
+  border-radius: 25px;
+  width: 100%;
+}
+.rbox {
+  background: #fff;
+  width: 86%;
+  border-radius: 25px;
+  padding: 25px;
+  margin: 28px 0;
+}
+
+a {
+  text-decoration: none;
+}
+.additional {
+  margin: 4px;
+}

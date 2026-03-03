@@ -1,0 +1,38 @@
+#!/bin/bash
+if [[ -e .git ]];then
+	
+	while true;do
+		echo -e "\n1. git add"
+		echo '2. git commit'
+		echo '3. git log'
+		echo '4. Quit'
+		read -n 1 -p "What do you want to do? " resp
+		case $resp in
+			1)
+				git add .
+				;;
+			3)
+				git log
+				;;
+			2)
+				echo "" 
+				read -p "type your message " resps
+				git commit -m "$resps"
+				;;
+			4)
+				exit 0
+				;;
+			*)
+				echo -e "\nERR"
+				;;
+		esac
+	done
+else
+	git init
+	read -p "Enter your github link " link
+	git remote add origin $link
+	read -p "Enter your github token " token
+	read -p "Enter your github username " user
+	read -p "Enter your github repository " token
+	git remote set-url origin https://${token}@github.com/${user}/${repo}.git
+fi
